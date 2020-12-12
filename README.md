@@ -6,3 +6,4 @@ The boxes are color coded:
 Red = Now. better get this done.
 Green = Later. things to be done.
 Grey = Done. Tasks of projects past.
+![screenshot](https://github.com/TylerWilliams97/Day-Planner/blob/main/Assets/screenshot.png)
