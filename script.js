@@ -7,7 +7,7 @@ var container = $('.container');
 console.log(time);
 console.log(date);
 console.log(localTime);
-
+console.log(time.hour);
 $("#currentDay").text(date);
 
 function timeFormat(i){
@@ -44,6 +44,18 @@ $(".saveBtn").on('click', function(){
 )
 for (let i = 9; i < 18; i++){
 $('#'+i).children().siblings("textarea").val(localStorage.getItem(i));
+if(i>time.hour){
+    $('#'+i).children().siblings("textarea").removeClass('past','present');
+    $('#'+i).children().siblings("textarea").addClass('future');
+}
+if(i<time.hour){
+    $('#'+i).children().siblings("textarea").removeClass('future','present');
+    $('#'+i).children().siblings("textarea").addClass('past');
+}
+else{
+    $('#'+i).children().siblings("textarea").removeClass('past','future');
+    $('#'+i).children().siblings("textarea").addClass('present');
+}
 }
 
 });
